@@ -1,3 +1,18 @@
-.sentence {
-  color: blue;
+.c-card {
+  background-color: white;
+  border: 1px solid #e8e9ea;
+  height: 115px;
+  width: 290px;
+}
+
+.c-card .c-card__title {
+  color: #0366d6;
+}
+
+.c-card .c-card__title a:visited {
+  color: #0366d6;
+}
+
+.c-card .c-card__repository_name {
+  color: #586069;
 }
