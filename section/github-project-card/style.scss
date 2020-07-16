@@ -1,21 +1,93 @@
 $cWhite: white;
+$cBlack: black;
 $cBorder: #e8e9ea;
+
+$fontSizeSmall: 12px;
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 .c-card {
     background-color: $cWhite;
     border: 1px solid $cBorder;
-    height: 115px;
-    width: 290px;
+    border-radius: 10px;
+    width: 327px;
+    padding-top: 8px;
 
-    & .c-card__title {
-        color: #0366d6;
+    & .c-card__contents {
+        height: 80px;
+        position: relative;
 
-        & a:visited {
-            color: #0366d6;
+        & .c-card_content-details {
+            margin: 0 32px 0 28px;
+
+            & .c-card__title {
+                font-size: 14px;
+                font-weight: 600;
+                color: #0366d6;
+                line-height: 1.25;
+        
+                & a:visited {
+                    color: #0366d6;
+                }
+            }
+        
+            & .c-card__repository_name {
+                color: #586069;
+                font-size: $fontSizeSmall;
+
+                & .c-card__user {
+                    color: $cBlack;
+                    font-size: $fontSizeSmall;
+                    & a:visited {
+                        color: $cBlack;
+                    }
+                }
+            }
         }
+
+        & .c-card__menu {
+            color: #6a737d;
+            display: inline-block;
+            position: absolute;
+
+            top: 0px;
+            right: 8px;
+        }
+
+        & .c-card__avator {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+
+            bottom: 8px;
+            right: 8px;
+
+            position: absolute;
+        }    
     }
 
-    & .c-card__repository_name {
+    & .c-card__status {
+        width: 100%;
+        height: 32px;
         color: #586069;
+        font-size: $fontSizeSmall;
+        border-top: 1px solid $cBorder;
+        position: relative;
+        
+
+        & .c-card__status-text {
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            left: 28px;
+            transform: translateY(-50%);
+        }
     }
 }
