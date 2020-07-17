@@ -1,0 +1,38 @@
+.l-sidebar {
+  color: white;
+  background-color: #3f0e40;
+  min-width: 200px;
+  max-width: 260px;
+  height: 100vh;
+  line-height: 1.5rem;
+  color: #CBBFCB;
+}
+
+.l-sidebar .l-sidebar-header {
+  border-bottom: 1px solid #522653;
+  padding: 16px 16px 8px 20px;
+}
+
+.l-sidebar .l-sidebar-header h2 {
+  color: white;
+}
+
+.l-sidebar .l-sidebar-header .l-sidebar-username::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #2BAC76;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.l-sidebar .l-sidebar-nav {
+  padding: 16px 16px 8px 20px;
+  cursor: pointer;
+}
+
+.c-channel-name {
+  font-weight: 600;
+}
