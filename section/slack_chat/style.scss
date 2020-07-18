@@ -1,11 +1,40 @@
-$cViolet: #3f0e40;
+$cHeader: #350D36;
+$cHeaderSearch: #49254A;
+$cMain: #3f0e40;
 $cWhite: white;
 $cBorder: #edf0f46d;
 $cText: #CBBFCB;
 
+.l-header {
+    height: 40px;
+    border-bottom: 1px solid $cBorder;
+    background-color: $cHeader;
+
+    & .p-header {
+        display: block;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        padding: 8px 0 8px;
+
+        & button {
+            height: 24px;
+            width: 40%;
+            min-width: 272px;
+            max-width: 560px;
+            color: $cText;
+            border: 1px solid $cBorder;
+            border-radius: 4px;
+            background-color: $cHeaderSearch;
+            padding: 0;
+        }
+    }
+}
+
 .l-sidebar {
     color: $cWhite;
-    background-color: $cViolet;
+    background-color: $cMain;
     min-width: 200px;
     max-width: 260px;
     height: 100vh;
