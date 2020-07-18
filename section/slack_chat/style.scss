@@ -1,24 +1,78 @@
 $cHeader: #350D36;
 $cHeaderSearch: #49254A;
-$cMain: #3f0e40;
+$cMainBG: #3f0e40;
 $cMainActivate: #350D36;
 $cWhite: white;
 $cBorder: #edf0f46d;
 $cContentBorder: rgb(82,38,83);
 $cText: #CBBFCB;
 
-$headerHeight: 44px;
+$mainHeaderHeight: 38px;
+$contentHeaderHeight: 44px;
+$sideBarMinWidth: 200px;
+$sideBarMaxWidth: 260px;
+
+#container {
+    display: grid;
+    grid-template-columns: minmax(#{$sideBarMinWidth}, max-content) 1fr;
+    grid-template-rows: #{$mainHeaderHeight} auto min-content;
+
+    & .l-header {
+        grid-column-start: 1;
+        grid-column-end: 3;
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+        background-color: $cHeader;
+
+        z-index: 203;
+
+        & .p-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    & .l-sidebar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+
+        grid-row-start: 2;
+        grid-row-end: auto;
+
+        background-color: $cMainBG;
+
+        z-index: 1;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    & section.l-content {
+        grid-column-start: 2;
+        grid-column-end: auto;
+
+        grid-row-start: 2;
+        grid-row-end: auto;
+
+        z-index: 1;
+    }
+}
+
 
 .p-content-header {
-    height: $headerHeight;
+    height: $contentHeaderHeight;
     border-bottom: 1px solid $cContentBorder;
     padding: 16px 16px 8px 20px;
 }
 
 .l-header {
-    height: 40px;
+    display: block;
     border-bottom: 1px solid #4A254B;
-    background-color: $cHeader;
 
     & .p-header {
         display: block;
@@ -26,7 +80,6 @@ $headerHeight: 44px;
         width: 100%;
         cursor: pointer;
         text-align: center;
-        padding: 8px 0 8px;
 
         & button {
             height: 24px;
@@ -35,7 +88,7 @@ $headerHeight: 44px;
             max-width: 560px;
             color: $cText;
             border: 1px solid $cBorder;
-            border-radius: 4px;
+            border-radius: 6px;
             background-color: $cHeaderSearch;
             padding: 0;
         }
@@ -44,7 +97,7 @@ $headerHeight: 44px;
 
 .l-sidebar {
     color: $cWhite;
-    background-color: $cMain;
+    background-color: $cMainBG;
     min-width: 200px;
     max-width: 260px;
     height: 100vh;
@@ -82,6 +135,17 @@ $headerHeight: 44px;
     }
 }
 
-.c-channel-name {
-    font-weight: 600;
-}
+// .l-content {
+//     width: 100%;
+
+//     & .p-content-header {
+//         // top: calc(#{$mainHeaderHeight} + 1px);
+//         // left: 200px;
+//         // right: 0;
+//         border-bottom: 1px solid #CBBFCB;
+//     }
+// }
+
+// .c-channel-name {
+//     font-weight: 600;
+// }
