@@ -1,3 +1,9 @@
+.p-content-header {
+  height: 44px;
+  border-bottom: 1px solid #522653;
+  padding: 16px 16px 8px 20px;
+}
+
 .l-header {
   height: 40px;
   border-bottom: 1px solid #4A254B;
@@ -31,20 +37,15 @@
   min-width: 200px;
   max-width: 260px;
   height: 100vh;
-  line-height: 1.5rem;
+  line-height: 20px;
   color: #CBBFCB;
 }
 
-.l-sidebar .l-sidebar-header {
-  border-bottom: 1px solid #522653;
-  padding: 16px 16px 8px 20px;
-}
-
-.l-sidebar .l-sidebar-header h2 {
+.l-sidebar .p-content-header h2 {
   color: white;
 }
 
-.l-sidebar .l-sidebar-header .l-sidebar-username::before {
+.l-sidebar .p-content-header .l-sidebar-username::before {
   content: '';
   display: inline-block;
   width: 10px;
@@ -58,6 +59,12 @@
 .l-sidebar .l-sidebar-nav {
   padding: 16px 16px 8px 20px;
   cursor: pointer;
+  line-height: 2em;
+  border-bottom: 1px solid #522653;
+}
+
+.l-sidebar .l-sidebar-nav li:hover {
+  background-color: #350D36;
 }
 
 .c-channel-name {

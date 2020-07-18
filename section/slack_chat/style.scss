@@ -1,9 +1,19 @@
 $cHeader: #350D36;
 $cHeaderSearch: #49254A;
 $cMain: #3f0e40;
+$cMainActivate: #350D36;
 $cWhite: white;
 $cBorder: #edf0f46d;
+$cContentBorder: rgb(82,38,83);
 $cText: #CBBFCB;
+
+$headerHeight: 44px;
+
+.p-content-header {
+    height: $headerHeight;
+    border-bottom: 1px solid $cContentBorder;
+    padding: 16px 16px 8px 20px;
+}
 
 .l-header {
     height: 40px;
@@ -38,13 +48,10 @@ $cText: #CBBFCB;
     min-width: 200px;
     max-width: 260px;
     height: 100vh;
-    line-height: 1.5rem;
+    line-height: 20px;
     color: #CBBFCB;
 
-    & .l-sidebar-header {
-        border-bottom: 1px solid rgb(82,38,83);
-        padding: 16px 16px 8px 20px;
-
+    & .p-content-header {
         & h2 {
             color: $cWhite;
         }
@@ -66,6 +73,12 @@ $cText: #CBBFCB;
     & .l-sidebar-nav {
         padding: 16px 16px 8px 20px;
         cursor: pointer;
+        line-height: 2em;
+        border-bottom: 1px solid $cContentBorder;
+
+        & li:hover {
+            background-color: $cMainActivate;
+        }
     }
 }
 
