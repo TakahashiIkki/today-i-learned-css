@@ -1,13 +1,58 @@
-$cHeader: #350D36;
-$cHeaderSearch: #49254A;
-$cMainBG: #3f0e40;
-$cMainActivate: #350D36;
-$cWhite: white;
-$cBorder: #edf0f46d;
-$cContentBorder: rgb(82,38,83);
-$cText: #CBBFCB;
+$cMainBG: #14212B;
+$cSubBG: #192834;
+$cText: white;
 
-$mainHeaderHeight: 38px;
-$contentHeaderHeight: 44px;
-$sideBarMinWidth: 200px;
-$sideBarMaxWidth: 260px;
+$mainSidebarWidth: 256px;
+$contentWidth: 632px;
+$subSideBarWidth: 382px;
+
+
+body {
+    color: $cText;
+    background-color: $cMainBG;
+}
+
+.wrapper  {
+    max-width: 1270px;
+    margin: 0 auto;
+    border: 1px solid white;
+    height: 90vh;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: #{$mainSidebarWidth} #{$contentWidth} #{$subSideBarWidth};
+
+    & .l-sidebar {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: 8px 16px;
+    }
+
+    & .l-contents {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 8px 16px;
+    }
+
+    & .l-recommend-user {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 8px 16px;
+
+        & .l-recommend-user-table {
+            background-color: $cSubBG;
+            border: 1px dotted yellowgreen;
+            border-radius: 16px;
+            width: 100%;
+            height: 340px;
+            padding-left: 16px;
+
+            & h2 {
+                // padding: 8px 16px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+body {
+  color: white;
+  background-color: #14212B;
+}
+
+.wrapper {
+  max-width: 1270px;
+  margin: 0 auto;
+  border: 1px solid white;
+  height: 90vh;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 256px 632px 382px;
+}
+
+.container .l-sidebar {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding: 8px 16px;
+}
+
+.container .l-contents {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding: 8px 16px;
+}
+
+.container .l-recommend-user {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  padding: 8px 16px;
+}
+
+.container .l-recommend-user .l-recommend-user-table {
+  background-color: #192834;
+  border: 1px dotted yellowgreen;
+  border-radius: 16px;
+  width: 100%;
+  height: 340px;
+  padding-left: 16px;
+}
+
+.container .l-recommend-user .l-recommend-user-table h2 {
+  font-size: 1.2rem;
+}
