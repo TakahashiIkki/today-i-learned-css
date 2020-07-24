@@ -13,13 +13,23 @@
 
 <body>
     <div class="wrapper">
-        <header class="l-header">
-            <div class="container">
+        <header id="header">
+            <div class="container clearfix">
                 <h1>
                     <a href="https://connpass.com/dashboard/" title="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム">
                         <img src="https://connpass.com/static/img/common/sitelogo_266x132_bp.png" alt="connpass - エンジニアをつなぐIT勉強会支援プラットフォーム" height="66">
                     </a>
                 </h1>
+                <form action="https://connpass.com/search/" method="GET" id="header_event_search_form">
+                    <div class="header_search">
+                      <input type="text" class="form_input_text" name="q" id="id_q" value="" placeholder="イベント検索">
+                      <button type="submit" class="btn btn_default btn_size_small"><img src="https://connpass.com/static/img/common/icon_search.png" alt="イベント検索"></button>
+                    </div>
+                </form>
+                <div class="header_nav_owner">
+                    <a href="https://connpass.com/editmanage/" class="btn btn_action event_manage">イベント管理</a>
+                    <span class="EventCreate btn btn_high_priority">イベント作成</span>
+                </div>
                 <div class="header_nav_personal">
                     <ul class="dropdown_menu">
                       <li id="personalMenu" class="image_link">
