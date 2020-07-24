@@ -7,6 +7,68 @@ $cMainBorder: #D6D6D6;
 $mainWidth: 1060px;
 $headerMinHeight: 75px;
 
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1, h2, h3, h4, h5, h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+button,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+sub,
+sup,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+textarea {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  font-size:12px;
+  font-family: "Lucida Grande",Verdana,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","MS Pゴシック","MS P Gothic","Osaka",sans-serif;
+  text-decoration:none;
+  word-wrap:break-word;
+}
+
 body {
     font-size: 12px;
     color: $cText;
@@ -76,6 +138,34 @@ a.btn.btn_size_small, .btn.btn_size_small {
     padding: 2px 4px;
     font-size: 11px;
     border-radius: 3px;
+}
+
+.text_center {
+    text-align: center !important;
+}
+
+.icon_gray_copy {
+    background-image: url(icon_gray_copy.png);
+}
+
+.icon_gray_graph {
+    display: inline-block;
+    padding-left: 24px;
+    background-image: url(icon_gray_graph.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.icon_gray_mail {
+    background-image: url(icon_gray_mail.png);
+}
+
+.icon_white_copy, .icon_white_delete, .icon_white_edit, .icon_white_mail, .icon_white_noentry, .icon_gray_copy, .icon_gray_delete, .icon_gray_edit, .icon_gray_mail, .icon_gray_noentry, .icon_black_copy, .icon_black_delete, .icon_black_edit, .icon_black_mail, .icon_black_noentry {
+    display: block;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    min-height: 18px;
 }
 
 .form_input_text {
@@ -254,3 +344,60 @@ a.btn.btn_size_small, .btn.btn_size_small {
         }
     }
 }
+
+.content_over {
+    background: #313131;
+    display: block;
+
+    & .container {
+        position: relative;
+        font-size: 0;
+    }
+
+    & .btn {
+        border-radius: 0;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    & .action_area .btn:first-child,
+    & .status_negative_area .btn:first-child,
+    & .participants_area .btn:first-child,
+    & .event_area .btn:first-child
+    {
+        border-left: 1px solid #868686;
+    }
+
+    & .public_status_area {
+        float: left;
+        padding: 4px 0;
+        width: 160px;
+        vertical-align: middle;
+        font-weight: bold;
+
+        &.public {
+            background: #444;
+            color: #fff;
+        }
+    }
+
+    & .owner_menu_area {
+        float: right;
+        // display: inline-block;
+        font-size: 0;
+        width: 800px;
+        color: #fff;
+        text-align: right;
+
+        & .btn {
+            border: none;
+            border-left: 1px solid #5A5A5A;
+            font-weight: normal;
+        }
+    }
+
+    & .status_negative_area .btn:last-child, & .event_area .btn:last-child {
+        border-right: 1px solid #868686;
+    }
+}
+
