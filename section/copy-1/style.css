@@ -18,6 +18,13 @@ a:link, a:visited, .link {
   cursor: pointer;
 }
 
+a:hover, .link:hover {
+  color: #666;
+  text-decoration: none;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 .btn, a.btn {
   display: inline-block;
   padding: 4px 6px;
@@ -175,6 +182,7 @@ a.btn.btn_size_small, .btn.btn_size_small {
   position: absolute;
   right: 30px;
   top: 24px;
+  font-size: 0;
 }
 
 .header_nav_owner .btn {
@@ -220,4 +228,19 @@ a.btn.btn_size_small, .btn.btn_size_small {
   box-sizing: border-box;
   border-top-left-radius: 0 !important;
   border-bottom-left-radius: 0 !important;
+}
+
+.header_nav_contents {
+  position: absolute;
+  left: 350px;
+  top: 27px;
+  font-weight: bold;
+}
+
+.header_nav_contents li {
+  display: inline;
+}
+
+.header_nav_contents li a {
+  text-decoration: none;
 }
