@@ -1,10 +1,20 @@
+@charset "UTF-8";
 body {
+  font-size: 12px;
   color: #444;
   background-color: #ececec;
 }
 
 ul {
   list-style: none;
+}
+
+a:link, a:visited, .link {
+  color: black;
+  text-decoration: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -23,7 +33,6 @@ ul {
 .l-header .container {
   position: relative;
   min-height: 75px;
-  border-color: lightblue;
 }
 
 .l-header .container .header_nav_personal {
@@ -38,4 +47,46 @@ ul {
 
 .l-header .container .header_nav_personal .dropdown_menu .image_link img {
   border: 1px solid #999;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu ul.dropdown_sub {
+  background-color: lightcyan;
+  z-index: 100;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  display: none;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu ul.dropdown_sub li {
+  width: 135px;
+  height: 35px;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu ul.dropdown_sub li a {
+  display: block;
+  padding: 6px;
+  line-height: 24px;
+  text-indent: 5px;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 長い場合は ... になる */
+}
+
+.l-header .container .header_nav_personal .dropdown_menu ul.dropdown_sub li a:hover {
+  background-color: #efefef;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu ul.dropdown_sub li + li {
+  border-top: 1px solid #ccc;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu .active ul.dropdown_sub {
+  display: block;
 }
