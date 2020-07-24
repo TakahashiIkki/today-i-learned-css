@@ -1,0 +1,41 @@
+body {
+  color: #444;
+  background-color: #ececec;
+}
+
+ul {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  width: 530px;
+  margin: 0 auto;
+}
+
+.l-header {
+  border-bottom: 1px solid #D6D6D6;
+}
+
+.l-header .container {
+  position: relative;
+  min-height: 75px;
+  border-color: lightblue;
+}
+
+.l-header .container .header_nav_personal {
+  position: absolute;
+  right: 0;
+  top: 26px;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu {
+  cursor: pointer;
+}
+
+.l-header .container .header_nav_personal .dropdown_menu .image_link img {
+  border: 1px solid #999;
+}
